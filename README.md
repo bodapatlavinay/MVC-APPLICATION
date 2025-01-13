@@ -4,7 +4,7 @@ This is a Student Management System built with ASP.NET MVC and Entity Framework 
 
 **Features:**
 
-**MVC Design Pattern: ** Organized structure with Models, Views, and Controllers.
+**MVC Design Pattern:** Organized structure with Models, Views, and Controllers.
 
 **CRUD Operations:** Create, Read, Update, and Delete students.
 
