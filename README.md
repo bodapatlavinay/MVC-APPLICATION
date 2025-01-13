@@ -20,7 +20,7 @@ This is a Student Management System built with ASP.NET MVC and Entity Framework 
 
 **Clone the repository:**
 
-git clone https://github.com/<your-repo-link>.git
+git clone https://github.com/bodapatlavinay/MVC-APPLICATION.git
 
 Configure the connection string in appsettings.json.
 
