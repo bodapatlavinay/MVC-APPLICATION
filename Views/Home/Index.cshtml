@@ -1,0 +1,44 @@
+﻿@model IEnumerable<STUDB.Models.Student>
+
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h1>Student List</h1>
+<a asp-action="Create" class="btn btn-primary">Add Student</a>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@student.Email</td>
+                    <td>@student.Age</td>
+                    <td>@student.Address</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@student.Id" class="btn btn-warning">Edit</a>
+
+                        <a asp-action="Delete" asp-route-id="@student.Id" class="btn btn-danger"
+                           onclick="return confirm('Are you sure you want to delete this student?');">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No students found.</p>
+}
